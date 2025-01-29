@@ -52,6 +52,11 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    public function posts()
+    {
+        return $this->hasMany(BlogPost::class);
+    }
+
     /**
      * Get the attributes that should be cast.
      *
